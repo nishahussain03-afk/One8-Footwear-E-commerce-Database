@@ -1,0 +1,114 @@
+# Requirement Analysis
+
+## Functional Requirements
+
+The ONE8 Shoes E-Commerce Database should support the following functionalities:
+
+* Customer registration, login, and profile management.
+* Admin authentication and dashboard access.
+* Product management (Add, Update, Delete, View).
+* Category and brand management.
+* Product search, filtering, and sorting.
+* Shopping cart management.
+* Wishlist management.
+* Order placement and order history.
+* Secure payment processing and payment records.
+* Delivery and shipment tracking.
+* Inventory and stock management.
+* Product reviews and ratings.
+* Discount offers and coupon management.
+* Sales report generation and business analytics.
+
+---
+
+## Non-Functional Requirements
+
+* **Performance:** The database should provide fast query execution and support multiple concurrent users.
+* **Scalability:** The system should accommodate increasing numbers of products, customers, and transactions.
+* **Security:** Customer information, payment details, and administrative data must be securely stored and protected.
+* **Reliability:** The database should ensure high availability, backup, and recovery mechanisms.
+* **Data Integrity:** Relationships between tables must be maintained using primary keys, foreign keys, and constraints.
+* **Maintainability:** The database should be easy to update, modify, and extend with new features.
+* **Usability:** The database structure should be organized and easy to understand for developers and administrators.
+
+---
+
+## User Requirements
+
+### Customer
+
+* Register and log in securely.
+* Browse products by category or brand.
+* Search for products.
+* View product details.
+* Add products to the shopping cart.
+* Add or remove products from the wishlist.
+* Place orders and make payments.
+* Track order status.
+* View order history.
+* Submit product reviews and ratings.
+
+### Administrator
+
+* Manage customer accounts.
+* Manage products, categories, and brands.
+* Update inventory levels.
+* Process customer orders.
+* Monitor payments.
+* Manage delivery information.
+* Create and manage discount offers.
+* Generate sales and inventory reports.
+
+---
+
+## System Requirements
+
+### Hardware Requirements
+
+* Processor: Intel Core i3 or above
+* RAM: 4 GB minimum (8 GB recommended)
+* Storage: 20 GB available disk space
+* Internet connection for GitHub and database access
+
+### Software Requirements
+
+* Operating System: Windows 10/11, Linux, or macOS
+* Database: MySQL
+* Database Tool: MySQL Workbench
+* IDE: Visual Studio Code
+* Version Control: Git & GitHub
+* Documentation: Microsoft Word or PDF
+
+---
+
+## Database Requirements
+
+The database should maintain the following entities:
+
+* Customer
+* Admin
+* Product
+* Category
+* Brand
+* Shopping Cart
+* Wishlist
+* Orders
+* Order Items
+* Payment
+* Delivery
+* Inventory
+* Reviews
+* Offers & Coupons
+
+Each entity should be connected using appropriate relationships with **Primary Keys**, **Foreign Keys**, and **Normalization (up to Third Normal Form - 3NF)** to eliminate redundancy and ensure data consistency.
+
+---
+
+## Assumptions
+
+* Customers must register before placing an order.
+* Every product belongs to one category and one brand.
+* Each order is associated with one customer.
+* Every order has a corresponding payment record.
+* Inventory is updated automatically after successful order placement.
+* Only administrators have permission to manage products, inventory, and reports.
