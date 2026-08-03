@@ -1,79 +1,780 @@
--- ===========================================
--- ONE8 Footwear E-Commerce Database
--- CUSTOMER TABLE
--- ===========================================
+ CREATE TABLE Customer (
+  2      Customer_ID NUMBER(5) PRIMARY KEY,
+  3      Business_Name VARCHAR2(50) NOT NULL,
+  4      Contact_No NUMBER(10) UNIQUE,
+  5      Email VARCHAR2(50) UNIQUE,
+  6      Country VARCHAR2(30),
+  7      Address VARCHAR2(50)
+  8  );
 
--- Create Customer Table
+Table created.
 
-CREATE TABLE Customer (
-    Customer_ID     NUMBER(5) PRIMARY KEY,
-    Customer_Name   VARCHAR2(50) NOT NULL,
-    Email           VARCHAR2(50) UNIQUE,
-    Phone_Number    NUMBER(10) UNIQUE,
-    Address         VARCHAR2(50),
-    Password        VARCHAR2(20)
-);
+SQL> INSERT INTO Customer VALUES (101, 'ABC Traders', 9876543210, 'abc@gmail.com', 'India', 'Chennai');
 
--- ===========================================
--- Insert Records
--- ===========================================
+1 row created.
 
-INSERT INTO Customer VALUES (101, 'Aarav Mehta', 'aarav.mehta@gmail.com', 9876500101, 'Chennai, Tamil Nadu', 'aarav@123');
+SQL> INSERT INTO Customer VALUES (102, 'Tech Solutions', 9876543211, 'tech@gmail.com', 'India', 'Bangalore');
 
-INSERT INTO Customer VALUES (102, 'Diya Sharma', 'diya.sharma@gmail.com', 9876500102, 'Mumbai, Maharashtra', 'diya@456');
+1 row created.
 
-INSERT INTO Customer VALUES (103, 'Kabir Nair', 'kabir.nair@gmail.com', 9876500103, 'Bengaluru, Karnataka', 'kabir@789');
+SQL> INSERT INTO Customer VALUES (103, 'Green Mart', 9876543212, 'green@gmail.com', 'India', 'Hyderabad');
 
-INSERT INTO Customer VALUES (104, 'Ishita Rao', 'ishita.rao@gmail.com', 9876500104, 'Hyderabad, Telangana', 'ishita@321');
+1 row created.
 
-INSERT INTO Customer VALUES (105, 'Rohan Verma', 'rohan.verma@gmail.com', 9876500105, 'Delhi', 'rohan@654');
+SQL> INSERT INTO Customer VALUES (104, 'Royal Exports', 9876543213, 'royal@gmail.com', 'India', 'Mumbai');
 
-INSERT INTO Customer VALUES (106, 'Ananya Iyer', 'ananya.iyer@gmail.com', 9876500106, 'Kochi, Kerala', 'ananya@987');
+1 row created.
 
-INSERT INTO Customer VALUES (107, 'Vivaan Kapoor', 'vivaan.kapoor@gmail.com', 9876500107, 'Pune, Maharashtra', 'vivaan@159');
+SQL> INSERT INTO Customer VALUES (105, 'Sun Enterprises', 9876543214, 'sun@gmail.com', 'India', 'Delhi');
 
-INSERT INTO Customer VALUES (108, 'Sara Fernandes', 'sara.fernandes@gmail.com', 9876500108, 'Goa', 'sara@753');
+1 row created.
 
-INSERT INTO Customer VALUES (109, 'Aditya Reddy', 'aditya.reddy@gmail.com', 9876500109, 'Coimbatore, Tamil Nadu', 'aditya@246');
+SQL> INSERT INTO Customer VALUES (106, 'Global Imports', 9876543215, 'global@gmail.com', 'USA', 'New York');
 
-INSERT INTO Customer VALUES (110, 'Meera Pillai', 'meera.pillai@gmail.com', 9876500110, 'Trivandrum, Kerala', 'meera@864');
+1 row created.
 
-COMMIT;
+SQL> INSERT INTO Customer VALUES (107, 'City Wholesale', 9876543216, 'city@gmail.com', 'UK', 'London');
 
--- ===========================================
--- Display Records
--- ===========================================
+1 row created.
 
-SELECT * FROM Customer;
+SQL> INSERT INTO Customer VALUES (108, 'Prime Suppliers', 9876543217, 'prime@gmail.com', 'Singapore', 'Singapore');
 
--- ===========================================
--- Update Record
--- ===========================================
+1 row created.
 
-UPDATE Customer
-SET Address = 'Bandra, Mumbai, Maharashtra',
-    Password = 'rohan@999'
-WHERE Customer_ID = 105;
+SQL> INSERT INTO Customer VALUES (109, 'Future Electronics', 9876543218, 'future@gmail.com', 'Canada', 'Toronto');
 
-COMMIT;
+1 row created.
 
--- ===========================================
--- Display Updated Records
--- ===========================================
+SQL> INSERT INTO Customer VALUES (110, 'Smart Business', 9876543219, 'smart@gmail.com', 'Australia', 'Sydney');
 
-SELECT * FROM Customer;
+1 row created.
 
--- ===========================================
--- Delete Record
--- ===========================================
+SQL> SELECT * FROM Customer;
 
-DELETE FROM Customer
-WHERE Customer_ID = 110;
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        101 ABC Traders                                        9876543210
+abc@gmail.com
+India
+Chennai
 
-COMMIT;
 
--- ===========================================
--- Display Final Records
--- ===========================================
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        102 Tech Solutions                                     9876543211
+tech@gmail.com
+India
+Bangalore
 
-SELECT * FROM Customer;
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        103 Green Mart                                         9876543212
+green@gmail.com
+India
+Hyderabad
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        104 Royal Exports                                      9876543213
+royal@gmail.com
+India
+Mumbai
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        105 Sun Enterprises                                    9876543214
+sun@gmail.com
+India
+Delhi
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        106 Global Imports                                     9876543215
+global@gmail.com
+USA
+New York
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        107 City Wholesale                                     9876543216
+city@gmail.com
+UK
+London
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        108 Prime Suppliers                                    9876543217
+prime@gmail.com
+Singapore
+Singapore
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        109 Future Electronics                                 9876543218
+future@gmail.com
+Canada
+Toronto
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        110 Smart Business                                     9876543219
+smart@gmail.com
+Australia
+Sydney
+
+
+10 rows selected.
+
+SQL> UPDATE Customer
+  2  SET Country = 'UAE',
+  3      Address = 'Dubai'
+  4  WHERE Customer_ID = 105;
+
+1 row updated.
+
+SQL> SELECT * FROM Customer;
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        101 ABC Traders                                        9876543210
+abc@gmail.com
+India
+Chennai
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        102 Tech Solutions                                     9876543211
+tech@gmail.com
+India
+Bangalore
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        103 Green Mart                                         9876543212
+green@gmail.com
+India
+Hyderabad
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        104 Royal Exports                                      9876543213
+royal@gmail.com
+India
+Mumbai
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        105 Sun Enterprises                                    9876543214
+sun@gmail.com
+UAE
+Dubai
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        106 Global Imports                                     9876543215
+global@gmail.com
+USA
+New York
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        107 City Wholesale                                     9876543216
+city@gmail.com
+UK
+London
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        108 Prime Suppliers                                    9876543217
+prime@gmail.com
+Singapore
+Singapore
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        109 Future Electronics                                 9876543218
+future@gmail.com
+Canada
+Toronto
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        110 Smart Business                                     9876543219
+smart@gmail.com
+Australia
+Sydney
+
+
+10 rows selected.
+
+SQL> UPDATE Customer
+  2  SET Business_Name = 'Sun Global Enterprises'
+  3  WHERE Customer_ID = 105;
+
+1 row updated.
+
+SQL> SELECT * FROM Customer;
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        101 ABC Traders                                        9876543210
+abc@gmail.com
+India
+Chennai
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        102 Tech Solutions                                     9876543211
+tech@gmail.com
+India
+Bangalore
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        103 Green Mart                                         9876543212
+green@gmail.com
+India
+Hyderabad
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        104 Royal Exports                                      9876543213
+royal@gmail.com
+India
+Mumbai
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        105 Sun Global Enterprises                             9876543214
+sun@gmail.com
+UAE
+Dubai
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        106 Global Imports                                     9876543215
+global@gmail.com
+USA
+New York
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        107 City Wholesale                                     9876543216
+city@gmail.com
+UK
+London
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        108 Prime Suppliers                                    9876543217
+prime@gmail.com
+Singapore
+Singapore
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        109 Future Electronics                                 9876543218
+future@gmail.com
+Canada
+Toronto
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        110 Smart Business                                     9876543219
+smart@gmail.com
+Australia
+Sydney
+
+
+10 rows selected.
+
+SQL> UPDATE Customer
+  2  SET Business_Name = 'Sun Global Enterprises'
+  3  WHERE Customer_ID = 105;
+
+1 row updated.
+
+SQL> SELECT * FROM Customer;
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        101 ABC Traders                                        9876543210
+abc@gmail.com
+India
+Chennai
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        102 Tech Solutions                                     9876543211
+tech@gmail.com
+India
+Bangalore
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        103 Green Mart                                         9876543212
+green@gmail.com
+India
+Hyderabad
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        104 Royal Exports                                      9876543213
+royal@gmail.com
+India
+Mumbai
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        105 Sun Global Enterprises                             9876543214
+sun@gmail.com
+UAE
+Dubai
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        106 Global Imports                                     9876543215
+global@gmail.com
+USA
+New York
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        107 City Wholesale                                     9876543216
+city@gmail.com
+UK
+London
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        108 Prime Suppliers                                    9876543217
+prime@gmail.com
+Singapore
+Singapore
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        109 Future Electronics                                 9876543218
+future@gmail.com
+Canada
+Toronto
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        110 Smart Business                                     9876543219
+smart@gmail.com
+Australia
+Sydney
+
+
+10 rows selected.
+
+SQL> DELETE FROM Customer
+  2  WHERE Customer_ID = 110;
+
+1 row deleted.
+
+SQL> SELECT * FROM Customer;
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        101 ABC Traders                                        9876543210
+abc@gmail.com
+India
+Chennai
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        102 Tech Solutions                                     9876543211
+tech@gmail.com
+India
+Bangalore
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        103 Green Mart                                         9876543212
+green@gmail.com
+India
+Hyderabad
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        104 Royal Exports                                      9876543213
+royal@gmail.com
+India
+Mumbai
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        105 Sun Global Enterprises                             9876543214
+sun@gmail.com
+UAE
+Dubai
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        106 Global Imports                                     9876543215
+global@gmail.com
+USA
+New York
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        107 City Wholesale                                     9876543216
+city@gmail.com
+UK
+London
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        108 Prime Suppliers                                    9876543217
+prime@gmail.com
+Singapore
+Singapore
+
+
+CUSTOMER_ID BUSINESS_NAME                                      CONTACT_NO
+----------- -------------------------------------------------- ----------
+EMAIL
+--------------------------------------------------
+COUNTRY
+------------------------------
+ADDRESS
+--------------------------------------------------
+        109 Future Electronics                                 9876543218
+future@gmail.com
+Canada
+Toronto
+
+
+9 rows selected.
