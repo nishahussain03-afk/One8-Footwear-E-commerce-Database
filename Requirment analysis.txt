@@ -1,0 +1,167 @@
+==========================================
+        REQUIREMENT ANALYSIS
+==========================================
+
+The ONE8 Shoes E-Commerce Database is designed to support an online shopping platform by providing an efficient and secure database for managing customers, products, orders, payments, inventory, and administrative operations. The system enables customers to browse products, purchase shoes online, and track their orders, while administrators can manage products, inventory, customers, and sales information.
+
+------------------------------------------
+1. Functional Requirements
+------------------------------------------
+
+• Customer Registration and Login
+  - Customers can create a new account.
+  - Existing customers can log in securely.
+  - Customers can update their profile information.
+
+• Product Management
+  - Add, update, delete, and view products.
+  - Organize products into categories.
+  - Assign products to specific brands.
+
+• Product Search
+  - Search products by name.
+  - Filter products by category, brand, price, or availability.
+
+• Shopping Cart
+  - Add products to the cart.
+  - Update product quantities.
+  - Remove products from the cart.
+
+• Wishlist
+  - Save favorite products.
+  - Remove products from the wishlist.
+
+• Order Management
+  - Place new orders.
+  - View order history.
+  - Cancel orders before shipment.
+
+• Payment Management
+  - Store payment details.
+  - Support secure payment processing.
+  - Maintain payment history.
+
+• Delivery Management
+  - Track order delivery status.
+  - Update shipping information.
+
+• Inventory Management
+  - Monitor product stock.
+  - Update stock after every purchase.
+  - Notify low inventory levels.
+
+• Reviews and Ratings
+  - Customers can rate purchased products.
+  - Customers can write product reviews.
+
+• Admin Management
+  - Manage customers.
+  - Manage products, categories, and brands.
+  - Manage inventory.
+  - Generate sales reports.
+
+------------------------------------------
+2. Non-Functional Requirements
+------------------------------------------
+
+• Performance
+  - Fast data retrieval and query execution.
+  - Support multiple users simultaneously.
+
+• Security
+  - Protect customer information.
+  - Secure payment records.
+  - Restrict administrator access.
+
+• Reliability
+  - Ensure accurate and consistent data.
+  - Support backup and recovery.
+
+• Scalability
+  - Handle increasing numbers of customers, products, and orders.
+
+• Maintainability
+  - Easy to update and modify database tables.
+  - Support future feature additions.
+
+• Data Integrity
+  - Maintain relationships using primary and foreign keys.
+  - Prevent duplicate and invalid data.
+
+------------------------------------------
+3. User Requirements
+------------------------------------------
+
+Customer:
+- Register and log in.
+- Browse products.
+- Search and filter products.
+- Add items to cart and wishlist.
+- Place orders.
+- Make payments.
+- Track deliveries.
+- Write product reviews.
+
+Administrator:
+- Manage customer accounts.
+- Manage products and inventory.
+- Process customer orders.
+- Monitor payments.
+- Manage offers and discounts.
+- Generate sales reports.
+
+------------------------------------------
+4. Hardware Requirements
+------------------------------------------
+
+Processor : Intel Core i3 or Higher
+RAM       : 4 GB Minimum (8 GB Recommended)
+Storage   : 20 GB Free Disk Space
+Internet  : Required
+
+------------------------------------------
+5. Software Requirements
+------------------------------------------
+
+Operating System : Windows 10/11, Linux, or macOS
+Database         : MySQL
+Database Tool    : MySQL Workbench
+IDE              : Visual Studio Code
+Language         : SQL
+Version Control  : Git & GitHub
+Documentation    : Microsoft Word / PDF
+
+------------------------------------------
+6. Database Requirements
+------------------------------------------
+
+The database includes the following modules:
+
+- Customer
+- Admin
+- Product
+- Category
+- Brand
+- Shopping Cart
+- Wishlist
+- Orders
+- Order Items
+- Payment
+- Delivery
+- Inventory
+- Reviews
+- Offers & Coupons
+
+The database follows relational database concepts using Primary Keys, Foreign Keys, Constraints, and Normalization (1NF, 2NF, and 3NF) to ensure consistency, eliminate redundancy, and maintain data integrity.
+
+------------------------------------------
+7. Assumptions
+------------------------------------------
+
+• Customers must register before placing an order.
+• Each product belongs to one category and one brand.
+• Every order belongs to one customer.
+• Every order has a corresponding payment record.
+• Inventory is updated automatically after every successful purchase.
+• Only administrators can manage products, inventory, and reports.
+• The database is designed to support future enhancements such as AI recommendations, loyalty programs, and mobile application integration.
